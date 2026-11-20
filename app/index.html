@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI Trophy Guide &amp; Tracker — All 55 Trophies to Platinum</title>
+<meta name="description" content="Every Grand Theft Auto VI trophy with an original guide, a cited source, a stage-by-stage platinum roadmap, missable warnings, and a tracker that saves your progress.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+  <h1>GTA VI Trophy Guide <span>&amp;</span> Tracker</h1>
+  <p class="lede">Every trophy, an original guide, and a cited source beside each one. Follow the six-stage roadmap to the platinum — and mind the missable watchlist, because some chances only come once.</p>
+  <div class="progress" id="progress" aria-live="polite">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <p class="progress-text"><strong id="earnedCount">0</strong> of <strong>55</strong> earned &middot; <span id="progressPct">0%</span> to platinum</p>
+    <p class="grade-counts" id="gradeCounts"></p>
+  </div>
+  <p class="honesty">Honesty note: GTA VI is unreleased. Trophy names, descriptions and grades are the official PlayStation list. Where a step is only implied by the description, the guide says so — no specific location is stated as fact without a cited source.</p>
+</header>
+
+<nav class="toolbar" aria-label="Tracker controls">
+  <label class="search">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
+  <label>Grade
+    <select id="gradeFilter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label>Kind
+    <select id="kindFilter">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="side">Side missions</option>
+      <option value="collectible">Collectibles</option>
+      <option value="activity">Activities</option>
+      <option value="combat">Combat &amp; crime</option>
+      <option value="exploration">Exploration</option>
+      <option value="economy">Economy</option>
+    </select>
+  </label>
+  <label class="check"><input type="checkbox" id="missableOnly"> Missable only</label>
+  <label class="check"><input type="checkbox" id="hideEarned"> Hide earned</label>
+  <label class="check"><input type="checkbox" id="spoilerToggle"> Spoiler-safe (hide story names)</label>
+  <span class="actions">
+    <button id="exportBtn" type="button">Export progress</button>
+    <button id="importBtn" type="button">Import progress</button>
+    <input id="importFile" type="file" accept="application/json,.json" hidden>
+    <button id="resetBtn" type="button">Reset</button>
+  </span>
+</nav>
+
+<main>
+  <section id="checklist" aria-labelledby="listTitle">
+    <h2 id="listTitle">Trophy checklist <span class="shown" id="shownCount"></span></h2>
+    <p class="section-lede">Tick a trophy when you earn it — progress saves on this device. Open a card for the full guide and its source.</p>
+    <ul class="trophies" id="trophyList"></ul>
+    <p class="empty" id="emptyMsg" hidden>No trophies match these filters. Clear the search or widen the filters.</p>
+  </section>
+
+  <section id="roadmap" aria-labelledby="roadmapTitle">
+    <h2 id="roadmapTitle">Platinum roadmap — six stages, in order</h2>
+    <p class="section-lede">Play the story first and let the side content open up around it. Collectibles and activities ride along with exploration; combat and crime come once you are tooled up; the economy cleanup is last, because it needs the cash the rest of the game earns you.</p>
+    <ol class="stages" id="stages"></ol>
+    <div class="watchlist" id="watchlist">
+      <h3>Missable watchlist — do these when the chance appears</h3>
+      <p>Only four trophies carry real missable risk. The rest can be earned any time, including after the story in free roam.</p>
+      <ul id="watchlistItems"></ul>
+    </div>
+  </section>
+
+  <section id="sources" aria-labelledby="sourcesTitle">
+    <h2 id="sourcesTitle">Source matrix — where every fact comes from</h2>
+    <p class="section-lede">A specific location or step with no citation earns no credit, so each trophy names its source. This matrix shows which sources cover which trophies.</p>
+    <table class="matrix">
+      <thead>
+        <tr><th>Source</th><th>What it covers</th><th>Trophies</th></tr>
+      </thead>
+      <tbody id="matrixBody"></tbody>
+    </table>
+    <p class="source-note">The official PlayStation trophy list is the authority for all 55 names, descriptions and grades. Rockstar's own site and Trailer 2 are the authority for the setting, characters and activities the guides describe. Community guides are cited only where a method needs confirming after release — never copied.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Built as an offline single-page guide. No account, no network, no tracking — your checklist lives in this browser only.</p>
+  <p>Grand Theft Auto and GTA are trademarks of Take-Two Interactive. Trophy names and descriptions are PlayStation's official list, reproduced for a guide. This is an unofficial fan guide, not affiliated with Rockstar Games or Sony Interactive Entertainment.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
